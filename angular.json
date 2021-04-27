@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "olas"
+  "defaultProject": "olas",
+  "cli": {
+    "analytics": "3f310088-aeb4-4dc9-9967-a55ed636eb54"
+  }
 }
