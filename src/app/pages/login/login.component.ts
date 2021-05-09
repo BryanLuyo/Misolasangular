@@ -1,3 +1,4 @@
+import { ChatService } from './../../services/chat.service';
 import { Component, OnInit } from '@angular/core';
 import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from '@techiediaries/ngx-qrcode';
 
@@ -14,5 +15,5 @@ export class LoginComponent {
   elementType = NgxQrcodeElementTypes.IMG;
   correctionLevel = NgxQrcodeErrorCorrectionLevels.MEDIUM;
   value = 'https://www.techiediaries.com/angular-10/asdasdasdasdasdasdasdasdas';
-  constructor() { }
+  constructor(private chat:ChatService) { }
 }
