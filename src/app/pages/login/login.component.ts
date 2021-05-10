@@ -1,15 +1,23 @@
 import { AuthService } from './../../services/auth.service';
-import { Component, OnInit } from '@angular/core';
-import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from '@techiediaries/ngx-qrcode';
+import { Component } from '@angular/core';
 
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [
+    AuthService
+  ],
 })
 
 export class LoginComponent {
   value = 'https://www.techiediaries.com/angular-10/asdasdasdasdasdasdasdasdas';
-  constructor(private auth:AuthService) { }
+  constructor(private auth:AuthService) {}
+
+  ngOnInit() {
+     this.auth.getAll().subscribe((resp:any) => {
+        console.log(resp);
+     });
+  }
 }
