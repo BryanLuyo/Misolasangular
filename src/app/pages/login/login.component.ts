@@ -1,6 +1,7 @@
-import { ChatService } from './../../services/chat.service';
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from '@techiediaries/ngx-qrcode';
+
 
 @Component({
   selector: 'app-login',
@@ -8,12 +9,7 @@ import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from '@techiedi
   styleUrls: ['./login.component.scss']
 })
 
-
-
-
 export class LoginComponent {
-  elementType = NgxQrcodeElementTypes.IMG;
-  correctionLevel = NgxQrcodeErrorCorrectionLevels.MEDIUM;
   value = 'https://www.techiediaries.com/angular-10/asdasdasdasdasdasdasdasdas';
-  constructor(private chat:ChatService) { }
+  constructor(private auth:AuthService) { }
 }

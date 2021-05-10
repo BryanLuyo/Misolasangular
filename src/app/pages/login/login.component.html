@@ -1,8 +1,71 @@
-<h1>Hola </h1>
+<main>
+    <header class="d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-1 ">
+                    <img src="assets/img/logo.png" class="logo" alt="">
+                </div>
+                <div class="col-lg-2 d-flex align-items-center justify-content-end">
+                    <a href="" class="cerrar">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="qr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="qr__imagen" style="background-image: url(assets/img/bg/bg-codigo.jpg);"></div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="qr__content">
+                        <h2>Para usar Mis Olas en tu computadora:</h2>
+                        <ul>
+                            <li>1. Abre Mis Olas en tu teléfono</li>
+                            <li>2. Toca Menú <img src="assets/img/iconos/trespuntos.png" alt=""> y Seleccionar Mis Olas</li>
+                            <li>3. Cuando se active la cámara, apunta tu teléfono hacia esta pantalla para escanear el código</li>
+                        </ul>
+                        <div class="qr__content__img">
+                            <qr-code [value]="value" size="230" errorCorrectionLevel="M" centerImageSrc="undefined" centerImageSize="undefined">
+                            </qr-code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="footer__contenido">
+                        <h2>Mis olas App</h2>
+                        <div class="logosApp">
+                            <a href=""><img src="assets/img/iconos/googlePlay.png" alt=""></a>
+                            <a href=""><img src="assets/img/iconos/appStore.png" alt=""></a>
+                        </div>
+                        <a href="" class="terminos" data-toggle="modal" data-target="#exampleModal"> Terminos y condiciones </a>
+                        <a href="" class="terminos" data-toggle="modal" data-target="#modalPolitica"> Políticas de Privacidad</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer__contacto">
+                        <a href="mailto:contacto@misolas.com"><img src="assets/img/iconos/email.png" alt=""> <span>contacto@misolas.com</span> </a>
+                        <a href="tel:+51986809322"><img src="assets/img/iconos/whatsapp.png" alt=""> <span>+51 986 809 322</span> </a>
+                    </div>
+                    <div class="footer__redes">
+                        <a href="https://www.facebook.com/Mis-Olas-101691304966370" target="_blank"><img src="assets/img/iconos/facebook.png" alt=""></a>
+                        <a href="https://www.instagram.com/mis_olas/" target="_blank"><img src="assets/img/iconos/instagram.png" alt=""></a>
+                        <a href="https://www.youtube.com/channel/UCYg7sAr5LW7yQX6EPYAVEag" target="_blank"><img src="assets/img/iconos/youtube.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <h6>© 2021 Mis Olas Todos los derechos reservados </h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+<!---
 
-<ngx-qrcode weight ="100%"
-  [elementType]="elementType"
-  [errorCorrectionLevel]="correctionLevel"
-  [value]="value"
-  alt="Demo QR Code"
-  cssClass="bshadow"></ngx-qrcode>
+-->
